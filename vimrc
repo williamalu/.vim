@@ -14,9 +14,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Color scheme
-" highlight Comment ctermfg=DarkBlue "Comments
-" highlight Constant ctermfg=LightRed "Things inside of double quotes
-" highlight Special ctermfg=Magenta "%s, \n, etc.
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Instant markdown
 filetype plugin on
