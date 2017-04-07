@@ -24,7 +24,15 @@ let g:instant_markdown_allow_unsafe_content=1 "allow scripts to run
 
 " Vim Airline
 set laststatus=2 "Make the tabline show up before splits
-let g:airline_theme='wombat' "Set airline theme
+let g:airline_theme='solarized' "Set airline theme
+let g:solarized_base16 = 1
 
 " Map Enter key to select current tab complete option in VimCompletesMe
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Leader shortcuts
+let mapleader="," " , instead of \
+
+    " Make for files
+    nmap <silent> <leader>mp2 <Esc>:w<CR>:!clear;python2 %<CR>
+    nmap <silent> <leader>mp3 <Esc>:w<CR>:!clear;python3 %<CR>
