@@ -2,7 +2,7 @@
 execute pathogen#infect()
 
 " Allow colors in terminal
-set t_Co=256 "Fix color issue with airline themes
+"set t_Co=256 "Fix color issue with airline themes
 
 " Turn on line numbers
 set number
@@ -15,8 +15,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Color scheme
 syntax enable
-set background=dark
-colorscheme solarized
 
 " Instant markdown
 filetype plugin on
