@@ -31,6 +31,13 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Leader shortcuts
 let mapleader="," " , instead of \
 
-    " Make for files
-    nmap <silent> <leader>mp2 <Esc>:w<CR>:!clear;python2 %<CR>
-    nmap <silent> <leader>mp3 <Esc>:w<CR>:!clear;python3 %<CR>
+" Make for files
+nmap <silent> <leader>mp2 <Esc>:w<CR>:!clear;python2 %<CR>
+nmap <silent> <leader>mp3 <Esc>:w<CR>:!clear;python3 %<CR>
+
+" Warn when over 80 characters in a row
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
